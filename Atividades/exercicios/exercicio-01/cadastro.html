@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <h1>Dados de Cadastro</h1>
+    <form method="GET" action="validar.html">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" placeholder="Ex.: José Silva">
+        </div>
+        <div>
+            <label for="endereco">Endereço</label>
+            <input type="text" name="endereco" id="endereco" placeholder="Rua dos Bobos, 0">
+        </div>
+        <div>
+            <label for="cpf">CPF:</label>
+            <input type="text" name="cpf" id="cpf" placeholder="111.222.333-45">
+        </div>
+        <div>
+            <label for="tel">Contato:</label>
+            <input type="tel" name="tel" id="tel" placeholder="(00) 99999-6666">
+        </div>
+        <div>
+            <label>Área de interesse:</label>
+            <div>
+                <input type="radio" name="area" id="web" value="web">
+                <label for="web">Sistemas Web</label>
+            </div>
+            <div>
+                <input type="radio" name="area" id="db" value="db">
+                <label for="db">Banco de Dados</label>
+            </div>
+            <div>
+                <input type="radio" name="area" id="redes" value="redes">
+                <label for="redes">Redes de Computadores</label>
+            </div>
+        </div>
+        <input type="submit" value="Cadastrar">
+        <input type="reset" value="Limpar">
+    </form>
+    <a href="index.html">Voltar</a>
+</body>
+
+</html>
