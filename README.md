@@ -5,7 +5,7 @@
 - Nome: Victor Hugo Morais Dias
 - Matrícula: 17.1.8175
 - Curso: Engenharia de Computação
-- Semestre/Ano correntes: 8 semestre/4 ano
+- Semestre/Ano correntes: 2020.2 EAD
 - GitHub: https://github.com/victor-dias1
 
 ## [Projeto final:](./Projeto/README.md) 
