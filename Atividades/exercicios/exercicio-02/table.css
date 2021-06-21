@@ -1,0 +1,33 @@
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+}
+
+thead {
+    font-size: 16pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+tbody {
+    font-size: 14pt;
+}
+
+tbody tr:hover {
+    background-color: rgb(228, 228, 228);
+}
+
+tbody tr:nth-child(2n + 0) { /* an + b */
+    background-color: rgb(255, 134, 225);
+}
+
+.esq {
+    text-align: left;
+}
