@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Cadastro</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Dados de Cadastro</h1>
+        <form action="../exercicio-05/cadastro/validar.php" method="POST" name="formCadastro">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" name="nome" id="name" placeholder="Ex.: José Silva" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="address">Endereço</label>
+                <input type="text" name="endereco" id="address" placeholder="Rua dos Bobos, 0" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="id">CPF:</label>
+                <input type="text" name="cpf" id="id" placeholder="11122233345" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="fone">Contato:</label>
+                <input type="tel" name="tel" id="fone" placeholder="00999996666" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Área de interesse:</label>
+                <div>
+                    <input type="radio" name="area" id="web" value="web">
+                    <label for="web">Sistemas Web</label>
+                </div>
+                <div>
+                    <input type="radio" name="area" id="db" value="db">
+                    <label for="db">Banco de Dados</label>
+                </div>
+                <div>
+                    <input type="radio" name="area" id="redes" value="redes">
+                    <label for="redes">Redes de Computadores</label>
+                </div>
+            </div>
+            <input type="submit" value="Cadastrar" name="btnAcessar" class="btn btn-outline-success">
+            <input type="reset" value="Limpar" name="btnLimpar" class="btn btn-outline-warning">
+        </form>
+        <a href="index.html">Voltar</a>
+    </div>
+</body>
+
+</html>
