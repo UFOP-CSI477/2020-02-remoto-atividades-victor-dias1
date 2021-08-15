@@ -1,5 +1,5 @@
 # **CSI606-2020-02 - Remoto - Proposta de Trabalho Final**
-## *Aluna(o): Princesa Leia (Luke Skywalker)*
+## *Aluna(o): Victor Dias*
 
 --------------
 
@@ -12,12 +12,15 @@
 <!-- Apresentar o tema. -->
 ### 1. Tema
 
-  O trabalho final tem como tema o desenvolvimento de ...
+  O trabalho final tem como tema o desenvolvimento de uma aplicação web com um sistema para gerenciamento de atividades/estudos.
 
 <!-- Descrever e limitar o escopo da aplicação. -->
 ### 2. Escopo
 
-  Este projeto terá as seguintes funcionalidades...
+  Este projeto terá as seguintes funcionalidades:<br>
+    - Criação e gerenciamento de tarefas<br>
+    - Adição e gerenciamento de PDFs<br>
+    - API google agenda<br>
 
 <!-- Apresentar restrições de funcionalidades e de escopo. -->
 ### 3. Restrições
