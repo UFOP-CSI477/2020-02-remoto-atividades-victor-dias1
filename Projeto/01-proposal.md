@@ -17,10 +17,10 @@
 <!-- Descrever e limitar o escopo da aplicação. -->
 ### 2. Escopo
 
-  Este projeto terá as seguintes funcionalidades:
-    - Criação e gerenciamento de tarefas
-    - Adição e gerenciamento de PDFs
-    - API google agenda
+  Este projeto terá as seguintes funcionalidades:<br>
+    - Criação e gerenciamento de tarefas<br>
+    - Adição e gerenciamento de PDFs<br>
+    - API google agenda<br>
 
 <!-- Apresentar restrições de funcionalidades e de escopo. -->
 ### 3. Restrições
