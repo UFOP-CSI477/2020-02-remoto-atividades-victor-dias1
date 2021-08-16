@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProdutoController;
 use App\Models\Produto;
 use Illuminate\Support\Facades\Route;
 
@@ -15,10 +16,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('principal');
+})->name('principal');
 
-Route::get('/produtos/todos', function () {
+Route::resource('/produtos', ProdutoController::class);
+
+/* Route::get('/produtos/todos', function () {
     $produtos = Produto::all();
     return view('listaTodos', ['dados' => $produtos]);
 });
@@ -30,4 +33,4 @@ Route::get('/produtos/{id}', function ($id) {
     } else {
         return view('lista', ['dados' => $produto]);
     }
-});
+}); */
