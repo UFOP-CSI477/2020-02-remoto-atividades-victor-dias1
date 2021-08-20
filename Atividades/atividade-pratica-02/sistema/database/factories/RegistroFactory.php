@@ -3,6 +3,9 @@
 namespace Database\Factories;
 
 use App\Models\Registro;
+use App\Models\Equipamento;
+use App\Models\User;
+
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class RegistroFactory extends Factory
@@ -22,9 +25,11 @@ class RegistroFactory extends Factory
     public function definition()
     {
         return [
+            'equipamento_id' => Equipamento::factory(),
+            'usuario_id' => User::factory(),
             'descricao' => $this->faker->text(),
-            'datalimite' => $this->faker->dateTime('now', null),
-            'tipo' => $this->faker->randomNumber(11)
+            'datalimite' => $this->faker->date(),
+            'tipo' => $this->faker->randomNumber(),
         ];
     }
 }
