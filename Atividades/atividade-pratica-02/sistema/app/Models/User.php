@@ -41,4 +41,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // UM usuário -> tem N registros
+    public function registros()
+    {
+        return $this->hasMany(Registro::class);
+    }
 }
