@@ -5,13 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Produto extends Model
+class Pessoa extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nome', 'um'];
+    protected $fillable = ['nome'];
 
-    // 1 produto -> pertence a n compras
     public function compras()
     {
         return $this->hasMany(Compra::class);

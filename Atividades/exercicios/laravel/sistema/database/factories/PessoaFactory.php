@@ -2,17 +2,19 @@
 
 namespace Database\Factories;
 
-use App\Models\Produto;
+use App\Models\Pessoa;
+use App\Models\Compra;
+
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ProdutoFactory extends Factory
+class PessoaFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Produto::class;
+    protected $model = Pessoa::class;
 
     /**
      * Define the model's default state.
@@ -22,8 +24,8 @@ class ProdutoFactory extends Factory
     public function definition()
     {
         return [
-            'nome' => $this->faker->state(),
-            'um' => $this->faker->stateAbbr()
+            'nome' => $this->faker->name(),
+            'compra_id' => Compra::factory(),
         ];
     }
 }
