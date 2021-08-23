@@ -190,6 +190,10 @@
             border-radius: calc(.15rem - 1px);
             box-shadow: 0 1px 15px rgba(0, 0, 0, 0.04), 0 1px 6px rgba(0, 0, 0, 0.04);
         }
+
+        .btn-custom {
+            border-radius: 200px;
+        }
     </style>
 
     <script type="text/javascript">
