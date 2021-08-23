@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Task;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class TaskController extends Controller
@@ -25,7 +26,8 @@ class TaskController extends Controller
      */
     public function create()
     {
-        //
+        $tasks = Task::orderBy('id')->get();
+        return view('tasks.create', ['tasks' => $tasks]);
     }
 
     /**
@@ -36,7 +38,8 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Task::create($request->all());
+        return redirect()->route('tasks.index');
     }
 
     /**

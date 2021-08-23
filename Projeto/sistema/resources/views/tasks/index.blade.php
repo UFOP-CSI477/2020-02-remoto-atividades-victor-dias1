@@ -1,11 +1,30 @@
 @extends('main')
 
 @section('content')
+
+<div class="text-center">
+    <a href="{{ route('tasks.create') }}" class="btn btn-outline-primary">Criar Task</a>
+</div>
+
+<ul class="nav nav-pills todo-nav">
+    <li role="presentation" class="nav-item all-task active">
+        <a href="#" class="nav-link">All</a>
+    </li>
+    <li role="presentation" class="nav-item active-task">
+        <a href="#" class="nav-link">Active</a>
+    </li>
+    <li role="presentation" class="nav-item completed-task">
+        <a href="#" class="nav-link">Completed</a>
+    </li>
+</ul>
+
 <div class="todo-list">
-    @foreach($tasks as $t)
+    @foreach ($tasks as $t)
     <div class="todo-item">
         <div class="checker"><span class=""><input type="checkbox"></span></div>
-        <span>{{ $t->nome }}</span>
+        <span>
+            {{ $t->nome }}
+        </span>
         <div class="col" style="text-align: right;">
             <a href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
