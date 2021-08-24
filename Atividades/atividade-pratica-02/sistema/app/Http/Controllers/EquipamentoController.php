@@ -50,7 +50,7 @@ class EquipamentoController extends Controller
      */
     public function show(Equipamento $equipamento)
     {
-        //
+        return view('equipamentos.show', ['equipamento' => $equipamento]);
     }
 
     /**
@@ -61,7 +61,7 @@ class EquipamentoController extends Controller
      */
     public function edit(Equipamento $equipamento)
     {
-        //
+        return view('equipamentos.edit', ['equipamentos' => $equipamento]);
     }
 
     /**
@@ -73,7 +73,11 @@ class EquipamentoController extends Controller
      */
     public function update(Request $request, Equipamento $equipamento)
     {
-        //
+        $equipamento->fill($request->all());
+        $equipamento->save();
+
+        session()->flash('mensagem', 'Equipamento atualizado com sucesso!');
+        return redirect()->route('equipamentos.index');
     }
 
     /**

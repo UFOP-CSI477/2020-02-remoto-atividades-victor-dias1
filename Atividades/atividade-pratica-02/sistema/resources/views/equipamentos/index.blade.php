@@ -26,6 +26,7 @@
                 <td>{{ $eq->id }}</td>
                 <td>{{ $eq->nome }}</td>
                 <td>{{ $eq->updated_at }}</td>
+                <td><a href="{{route('equipamentos.show', $eq->id)}}" class="btn btn-outline-info">Exibir</a></td>
             </tr>
             @endforeach
 
