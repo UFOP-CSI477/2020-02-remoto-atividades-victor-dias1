@@ -41,3 +41,7 @@ Route::get('/equipamentos', function () {
 Route::get('/usuarios', function () {
     return User::all();
 }); */
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
