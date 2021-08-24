@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\EquipamentoController;
+use App\Http\Controllers\RegistroController;
 
 use App\Models\Equipamento;
 use App\Models\Registro;
@@ -24,6 +25,8 @@ Route::get('/', function () {
 })->name('principal');
 
 Route::resource('/equipamentos', EquipamentoController::class);
+
+Route::resource('/registros', RegistroController::class);
 
 
 

@@ -16,10 +16,10 @@ use App\Http\Controllers\TaskController;
 
 Route::get('/', function () {
     return view('main');
-})->name('main')->middleware('auth');
+})->name('main');
 
 Route::resource('/tasks', TaskController::class)->middleware('auth');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

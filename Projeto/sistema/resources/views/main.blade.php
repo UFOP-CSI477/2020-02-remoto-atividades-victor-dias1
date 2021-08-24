@@ -9,6 +9,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>To-do List</title>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            "use strict";
+
+            var todo = function() {
+                $('.todo-list .todo-item input').click(function() {
+                    if ($(this).is(':checked')) {
+                        $(this).parent().parent().parent().toggleClass('complete');
+                    } else {
+                        $(this).parent().parent().parent().toggleClass('complete');
+                    }
+                });
+
+                $('.todo-nav .all-task').click(function() {
+                    $('.todo-list').removeClass('only-active');
+                    $('.todo-list').removeClass('only-complete');
+                    $('.todo-nav li.active').removeClass('active');
+                    $(this).addClass('active');
+                });
+
+                $('.todo-nav .active-task').click(function() {
+                    $('.todo-list').removeClass('only-complete');
+                    $('.todo-list').addClass('only-active');
+                    $('.todo-nav li.active').removeClass('active');
+                    $(this).addClass('active');
+                });
+
+                $('.todo-nav .completed-task').click(function() {
+                    $('.todo-list').removeClass('only-active');
+                    $('.todo-list').addClass('only-complete');
+                    $('.todo-nav li.active').removeClass('active');
+                    $(this).addClass('active');
+                });
+
+                $('#uniform-all-complete input').click(function() {
+                    if ($(this).is(':checked')) {
+                        $('.todo-item .checker span:not(.checked) input').click();
+                    } else {
+                        $('.todo-item .checker span.checked input').click();
+                    }
+                });
+
+                $('.remove-todo-item').click(function() {
+                    $(this).parent().remove();
+                });
+            };
+
+            todo();
+
+            $(".add-task").keypress(function(e) {
+                if ((e.which == 13) && (!$(this).val().length == 0)) {
+                    $('<div class="todo-item"><div class="checker"><span class=""><input type="checkbox"></span></div> <span>' + $(this).val() + '</span> <a href="javascript:void(0);" class="float-right remove-todo-item"><i class="icon-close"></i></a></div>').insertAfter('.todo-list .todo-item:last-child');
+                    $(this).val('');
+                } else if (e.which == 13) {
+                    alert('Please enter new task');
+                }
+                $(document).on('.todo-list .todo-item.added input').click(function() {
+                    if ($(this).is(':checked')) {
+                        $(this).parent().parent().parent().toggleClass('complete');
+                    } else {
+                        $(this).parent().parent().parent().toggleClass('complete');
+                    }
+                });
+                $('.todo-list .todo-item.added .remove-todo-item').click(function() {
+                    $(this).parent().remove();
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -201,76 +272,7 @@
         }
     </style>
 
-    <script type="text/javascript">
-        $(document).ready(function() {
 
-            "use strict";
-
-            var todo = function() {
-                $('.todo-list .todo-item input').click(function() {
-                    if ($(this).is(':checked')) {
-                        $(this).parent().parent().parent().toggleClass('complete');
-                    } else {
-                        $(this).parent().parent().parent().toggleClass('complete');
-                    }
-                });
-
-                $('.todo-nav .all-task').click(function() {
-                    $('.todo-list').removeClass('only-active');
-                    $('.todo-list').removeClass('only-complete');
-                    $('.todo-nav li.active').removeClass('active');
-                    $(this).addClass('active');
-                });
-
-                $('.todo-nav .active-task').click(function() {
-                    $('.todo-list').removeClass('only-complete');
-                    $('.todo-list').addClass('only-active');
-                    $('.todo-nav li.active').removeClass('active');
-                    $(this).addClass('active');
-                });
-
-                $('.todo-nav .completed-task').click(function() {
-                    $('.todo-list').removeClass('only-active');
-                    $('.todo-list').addClass('only-complete');
-                    $('.todo-nav li.active').removeClass('active');
-                    $(this).addClass('active');
-                });
-
-                $('#uniform-all-complete input').click(function() {
-                    if ($(this).is(':checked')) {
-                        $('.todo-item .checker span:not(.checked) input').click();
-                    } else {
-                        $('.todo-item .checker span.checked input').click();
-                    }
-                });
-
-                $('.remove-todo-item').click(function() {
-                    $(this).parent().remove();
-                });
-            };
-
-            todo();
-
-            $(".add-task").keypress(function(e) {
-                if ((e.which == 13) && (!$(this).val().length == 0)) {
-                    $('<div class="todo-item"><div class="checker"><span class=""><input type="checkbox"></span></div> <span>' + $(this).val() + '</span> <a href="javascript:void(0);" class="float-right remove-todo-item"><i class="icon-close"></i></a></div>').insertAfter('.todo-list .todo-item:last-child');
-                    $(this).val('');
-                } else if (e.which == 13) {
-                    alert('Please enter new task');
-                }
-                $(document).on('.todo-list .todo-item.added input').click(function() {
-                    if ($(this).is(':checked')) {
-                        $(this).parent().parent().parent().toggleClass('complete');
-                    } else {
-                        $(this).parent().parent().parent().toggleClass('complete');
-                    }
-                });
-                $('.todo-list .todo-item.added .remove-todo-item').click(function() {
-                    $(this).parent().remove();
-                });
-            });
-        });
-    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>

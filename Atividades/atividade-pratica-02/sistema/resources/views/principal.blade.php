@@ -26,7 +26,7 @@
                             <a class="nav-link active" href="{{ route('equipamentos.index') }}">Equipamentos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Manutenções</a>
+                            <a class="nav-link active" href="{{ route('registros.index') }}">Manutenções</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

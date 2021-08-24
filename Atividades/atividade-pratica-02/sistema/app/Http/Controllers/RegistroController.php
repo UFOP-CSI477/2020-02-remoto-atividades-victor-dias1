@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Equipamento;
+use App\Models\Registro;
 use Illuminate\Http\Request;
 
-class EquipamentoController extends Controller
+class RegistroController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class EquipamentoController extends Controller
      */
     public function index()
     {
-        $equipamentos = Equipamento::orderBy('nome')->paginate(15);
+        $registros = Registro::orderBy('datalimite')->paginate(15);
 
-        return view('equipamentos.index', ['equipamentos' => $equipamentos]);
+        return view('registros.index', ['registros' => $registros]);
     }
 
     /**
@@ -43,10 +43,10 @@ class EquipamentoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Equipamento  $equipamento
+     * @param  \App\Models\Registro  $registro
      * @return \Illuminate\Http\Response
      */
-    public function show(Equipamento $equipamento)
+    public function show(Registro $registro)
     {
         //
     }
@@ -54,10 +54,10 @@ class EquipamentoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Equipamento  $equipamento
+     * @param  \App\Models\Registro  $registro
      * @return \Illuminate\Http\Response
      */
-    public function edit(Equipamento $equipamento)
+    public function edit(Registro $registro)
     {
         //
     }
@@ -66,10 +66,10 @@ class EquipamentoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Equipamento  $equipamento
+     * @param  \App\Models\Registro  $registro
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Equipamento $equipamento)
+    public function update(Request $request, Registro $registro)
     {
         //
     }
@@ -77,10 +77,10 @@ class EquipamentoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Equipamento  $equipamento
+     * @param  \App\Models\Registro  $registro
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Equipamento $equipamento)
+    public function destroy(Registro $registro)
     {
         //
     }
