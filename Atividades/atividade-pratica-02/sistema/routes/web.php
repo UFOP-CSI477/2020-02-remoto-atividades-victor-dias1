@@ -24,9 +24,9 @@ Route::get('/', function () {
     return view('principal');
 })->name('principal');
 
-Route::resource('/equipamentos', EquipamentoController::class);
+Route::resource('/equipamentos', EquipamentoController::class)->middleware('auth');
 
-Route::resource('/registros', RegistroController::class);
+Route::resource('/registros', RegistroController::class)->middleware('auth');
 
 
 
