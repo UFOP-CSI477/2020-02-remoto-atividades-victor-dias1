@@ -6,9 +6,9 @@
     <a href="{{ route('tasks.create') }}" class="btn btn-outline-primary">Criar Task</a>
 </div>
 
-<ul class="nav nav-pills todo-nav">
+<!-- <ul class="nav nav-pills todo-nav">
     <li role="presentation" class="nav-item all-task active">
-        <a href="#" class="nav-link">Todas</a>
+        <a href="" class="nav-link">Todas</a>
     </li>
     <li role="presentation" class="nav-item active-task">
         <a href="#" class="nav-link">Ativas</a>
@@ -16,8 +16,7 @@
     <li role="presentation" class="nav-item completed-task">
         <a href="#" class="nav-link">Completadas</a>
     </li>
-</ul>
-
+</ul> -->
 <div class="todo-list">
     @foreach ($tasks as $t)
     <div class="todo-item">

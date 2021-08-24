@@ -247,7 +247,6 @@
                 $('.remove-todo-item').click(function() {
                     $(this).parent().remove();
                 });
-
             };
 
             todo();
