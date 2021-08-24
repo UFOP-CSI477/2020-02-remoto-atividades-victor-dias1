@@ -63,7 +63,7 @@
         </div>
     </main>
 
-    <footer class="footer mt-auto py-3 bg-light">
+    <footer class="footer mt-auto py-3 bg-light" style="position:relative; bottom: 0; left: 0; width: 100%; text-align: center;">
         <div class="container">
             <span class="text-muted">Place sticky footer content here.</span>
         </div>

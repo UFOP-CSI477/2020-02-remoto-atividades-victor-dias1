@@ -9,7 +9,7 @@ class Registro extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['descricao', 'tipo'];
+    protected $fillable = ['equipamento_id', 'usuario_id', 'descricao', 'datalimite', 'tipo'];
 
     // UM registro -> é de UM equipamento
     public function equipamento()

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Equipamento;
 use App\Models\Registro;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class RegistroController extends Controller
@@ -26,7 +28,9 @@ class RegistroController extends Controller
      */
     public function create()
     {
-        //
+        $equipamentos = Equipamento::orderBy('nome')->get();
+        $usuarios = User::orderBy('nome')->get();
+        return view('registros.create', ['usuarios' => $usuarios, 'equipamentos' => $equipamentos]);
     }
 
     /**
@@ -37,7 +41,9 @@ class RegistroController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Registro::create($request->all());
+        session()->flash('mensagem', 'Registrado com sucesso!');
+        return redirect()->route('registros.index');
     }
 
     /**
