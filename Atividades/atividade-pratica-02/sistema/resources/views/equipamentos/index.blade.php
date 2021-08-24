@@ -2,30 +2,43 @@
 
 @section('conteudo')
 
-<table class="table table-bordered table-hover table-striped">
-    <thead class="thead-dark">
-        <tr>
-            <th>#</th>
-            <th>Nome</th>
-            <th>Data de Atualização</th>
-        </tr>
-    </thead>
-    <tbody>
+<div class="row">
+    <div class="col"></div>
+    <div class="col">
+        <a href="{{ route('equipamentos.create') }}" class="btn btn-outline-primary">Cadastrar</a>
+    </div>
+    <div class="col"></div>
+</div>
 
-        @foreach($equipamentos as $eq)
-        <tr>
-            <td>{{ $eq->id }}</td>
-            <td>{{ $eq->nome }}</td>
-            <td>{{ $eq->updated_at }}</td>
-        </tr>
-        @endforeach
+<div class="row">
+    <table class="table table-bordered table-hover table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Data de Atualização</th>
+            </tr>
+        </thead>
+        <tbody>
 
-    </tbody>
-    <tfoot>
+            @foreach($equipamentos as $eq)
+            <tr>
+                <td>{{ $eq->id }}</td>
+                <td>{{ $eq->nome }}</td>
+                <td>{{ $eq->updated_at }}</td>
+            </tr>
+            @endforeach
 
-    </tfoot>
-</table>
+        </tbody>
+        <tfoot>
 
-{{ $equipamentos->links() }}
+        </tfoot>
+    </table>
+
+</div>
+
+<div class="row">
+    {{ $equipamentos->links() }}
+</div>
 
 @endsection

@@ -9,6 +9,8 @@ class Equipamento extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['nome'];
+
     // UM equipamento -> tem N registros
     public function registros()
     {

@@ -24,9 +24,9 @@ class EquipamentoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create() // method="post" action="store"
     {
-        //
+        return view('equipamentos.create');
     }
 
     /**
@@ -37,7 +37,9 @@ class EquipamentoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Equipamento::create($request->all());
+        session()->flash('mensagem', 'Equipamento cadastrado com sucesso!');
+        return redirect()->route('equipamentos.index');
     }
 
     /**

@@ -42,26 +42,23 @@
                             </ul>
                         </li>
                     </ul>
-                    <!-- <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form> -->
                 </div>
             </div>
         </nav>
     </header>
     <main class="flex-shrink-0">
-        @if(session('mensagem'))
 
-        <div class="alert alert-success">
-            {{ session('mensagem') }}
-        </div>
-
-        @endif
         <div class="container">
 
-            @yield('conteudo')
+            @if(session('mensagem'))
 
+            <div class="alert alert-success">
+                {{ session('mensagem') }}
+            </div>
+
+            @endif
+
+            @yield('conteudo')
 
         </div>
     </main>
