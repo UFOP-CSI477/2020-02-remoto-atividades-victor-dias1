@@ -5,24 +5,24 @@
 <form action="{{ route('registros.store') }}" method="post">
     @csrf
     <div class="form-group">
-        <label for="equipamento_nome">Equipamento:</label>
-        <select name="equipamento_nome" id="equipamento_id" class="form-control">
+        <label for="equipamento_id">Equipamento:</label>
+        <select name="equipamento_id" id="equipamento_id" class="form-select">
             @foreach($equipamentos as $eq)
             <option value="{{ $eq->id }}">{{ $eq->nome }}</option>
             @endforeach
         </select>
     </div>
     <div class="form-group">
-        <label for="usuario_nome">Usuario:</label>
-        <select name="usuario_nome" id="usuario_id" class="form-control">
+        <label for="usuario_id">Usuario:</label>
+        <select name="usuario_id" id="usuario_id" class="form-select">
             @foreach($usuarios as $u)
-            <option value="{{ $u->id }}">{{ $u->nome }}</option>
+            <option value="{{ $u->id }}">{{ $u->name }}</option>
             @endforeach
         </select>
     </div>
     <div class="form-group">
-        <label for="nome">Descrição: </label>
-        <input type="text" class="form-control" name="nome" id="nome">
+        <label for="descricao">Descrição: </label>
+        <input type="text" class="form-control" name="descricao" id="descricao">
     </div>
     <div class="form-group">
         <label for="tipo">Tipo: </label>

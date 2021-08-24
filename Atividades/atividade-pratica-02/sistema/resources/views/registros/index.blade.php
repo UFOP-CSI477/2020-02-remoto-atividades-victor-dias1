@@ -26,7 +26,7 @@
             <tr>
                 <td>{{ $reg->datalimite }}</td>
                 <td>{{ $reg->equipamento->nome }}</td>
-                <td>{{ $reg->user }}</td>
+                <td>{{ $reg->usuario->name }}</td>
                 <td>{{ $reg->tipo }}</td>
                 <td>{{ $reg->descricao }}</td>
             </tr>
