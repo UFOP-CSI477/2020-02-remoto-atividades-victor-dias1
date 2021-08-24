@@ -14,9 +14,7 @@ use App\Http\Controllers\TaskController;
 |
 */
 
-Route::get('/', function () {
-    return view('main');
-})->name('main');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('main');
 
 Route::resource('/tasks', TaskController::class)->middleware('auth');
 
