@@ -15,6 +15,11 @@
 
         <a class="btn btn-outline-warning" href="{{route('equipamentos.index')}}">Voltar</a>
     </div>
+    <form name="frmDelete" action="{{ route('equipamentos.destroy', $equipamento->id) }}" method="post" onsubmit="return confirm('Confirma a exclusão do equipamento?');">
+        @csrf
+        @method('DELETE')
+        <input type="submit" value="Excluir">
+    </form>
 </div>
 
 @endsection

@@ -88,6 +88,18 @@ class EquipamentoController extends Controller
      */
     public function destroy(Equipamento $equipamento)
     {
-        //
+        // Validação:
+        /* if ($equipamento->registros->count() > 0) {
+            session()->flash('mensagem', 'Exclusão não permitida!
+            Existem registros associados.');
+        } else {
+            $equipamento->delete();
+            session()->flash('mensagem', 'Equipamento excluído com sucesso!');
+        } */
+
+        $equipamento->delete();
+        session()->flash('mensagem', 'Equipamento excluído com sucesso!');
+
+        return redirect()->route('equipamentos.index');
     }
 }
